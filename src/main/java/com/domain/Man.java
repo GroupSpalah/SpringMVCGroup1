@@ -11,6 +11,9 @@ import lombok.experimental.FieldDefaults;
 @Builder
 @ToString
 public class Man {
+    int id;
     int age;
     String name;
+
+    Phone phone;
 }
