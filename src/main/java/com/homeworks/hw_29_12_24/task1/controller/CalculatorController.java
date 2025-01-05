@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+//http://localhost:9999/mvc/calculator/new/4/2?operation=+
+//++
 @Controller
 @RequestMapping("calculator")
 public class CalculatorController {
