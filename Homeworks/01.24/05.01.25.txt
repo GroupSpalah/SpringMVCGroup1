@@ -1,0 +1,4 @@
+!!!https://restfulapi.net/resource-naming/
+1) Notebook, CRUD and findAll
+2) Доска объявлений, добавить слой контроллеров
+
