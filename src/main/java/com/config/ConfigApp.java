@@ -7,6 +7,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebMvc// activation MVC pattern
-@ComponentScan(basePackages = "com")
+@ComponentScan(basePackages = {"com.controller", "com.service", "com.handlers_exceptions"})
 public class ConfigApp implements WebMvcConfigurer {
 }
