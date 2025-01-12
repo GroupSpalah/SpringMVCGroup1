@@ -34,6 +34,5 @@ public interface LaptopDao {
 
     void update(LaptopDocument laptop);
 
-    //для переноса таблицы
     List<LaptopDocument> getAllLaptop();
 }
