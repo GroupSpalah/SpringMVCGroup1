@@ -16,37 +16,26 @@ import java.io.FileNotFoundException;
 @AllArgsConstructor
 public class ManController {
 
-    CrudService service;
+    CrudService<Man> service;
 
     @PostMapping("/save")
     public void save(@RequestBody Man man) {
         service.save(man);
     }
 
-    @PutMapping("/save")
+    @PutMapping("/update")
     public void update(@RequestBody Man man) {
-        System.out.println(man);
+        service.update(man);
     }
 
     @GetMapping("/find/{id}")
     public Man getById(@PathVariable("id") int id) {
-        Phone phone = Phone
-                .builder()
-                .number("067")
-                .build();
-
-        Man john = Man
-                .builder()
-                .age(32)
-                .phone(phone)
-                .name("John")
-                .build();
-        return john;
+       return service.findById(id);
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteById(@PathVariable(name = "id") int id) throws FileNotFoundException {
-        throw new FileNotFoundException("File not found");
+    public void deleteById(@PathVariable(name = "id") int id) {
+       service.deleteById(id);
     }
 
 }

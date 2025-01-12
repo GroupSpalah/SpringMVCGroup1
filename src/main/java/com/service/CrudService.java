@@ -1,8 +1,14 @@
 package com.service;
 
-import com.domain.Man;
 
-public interface CrudService {
+public interface CrudService<T> {
 
-    void save(Man man);
+    void save(T t);
+
+    void update(T t);
+
+    void deleteById(int id);
+
+    T findById(int id);
+
 }

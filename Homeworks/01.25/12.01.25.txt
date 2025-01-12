@@ -1,0 +1,3 @@
+!!!https://restfulapi.net/resource-naming/
+2) Доска объявлений, добавить слой контроллеров
+
