@@ -1,9 +1,13 @@
 package com.domain;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Getter
@@ -13,6 +17,7 @@ import jakarta.persistence.*;
 @Builder
 @ToString
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Man {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,4 +29,7 @@ public class Man {
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     @JoinColumn(name = "FK_Man_Phone")
     Phone phone;
+
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "man")
+    List<Email> emails;
 }

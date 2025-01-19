@@ -58,12 +58,11 @@ public class ConfigApp implements WebMvcConfigurer {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUsername("root");
-        dataSource.setPassword("af66s60dk29l97j;");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/LearnJPA?serverTimezone=Europe/Kiev");
-        /*dataSource.setUsername("root");
+//        dataSource.setPassword("af66s60dk29l97j;");
+//        dataSource.setUrl("jdbc:mysql://localhost:3306/LearnJPA?serverTimezone=Europe/Kiev");
         dataSource.setPassword("Suntour123");
         dataSource.setUrl("jdbc:mysql://localhost:3306/spring-mvc-group1?serverTimezone=UTC");
-        */return dataSource;
+        return dataSource;
     }
 
     @Bean
